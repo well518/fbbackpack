@@ -1070,3 +1070,21 @@ textarea {
   border-radius: 50%;
   background: rgba(59, 93, 80, 0.2);
 }
+
+
+
+
+
+@media (max-width: 991.98px) {
+  .footer-section .sofa-img {
+    position: static;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .footer-section .sofa-img img {
+    max-width: 80%;
+  }
+}
