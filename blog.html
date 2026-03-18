@@ -426,7 +426,65 @@
 					<img src="images/fbpic/sofa.PNG" alt="Image" class="img-fluid">
 				</div>
 
+
+
 				<div class="row">
+  <div class="col-lg-8">
+    <div class="subscription-form">
+      <h3 class="d-flex align-items-center">
+        <span class="me-1">
+          <img src="images/envelope-outline.svg" alt="Image" class="img-fluid">
+        </span>
+        <span>Subscribe to Newsletter</span>
+      </h3>
+
+      <!-- EmailJS Form -->
+      <form id="newsletter-form" class="row g-3">
+        <div class="col-auto">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="col-auto">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">
+            <span class="fa fa-paper-plane"></span>
+          </button>
+        </div>
+      </form>
+
+      <div id="form-message" class="mt-3"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("4RcVYhHzU-HZK0np0"); // 替換成你的 EmailJS User ID
+  })();
+
+  const form = document.getElementById('newsletter-form');
+  const formMessage = document.getElementById('form-message');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.send("service_da5fxof", "template_sjqpv8a", {
+      from_name: form.name.value,
+      from_email: form.email.value
+    })
+    .then(function(response) {
+      formMessage.innerHTML = '<span class="text-success">Thank you! Your subscription has been sent.</span>';
+      form.reset();
+    }, function(error) {
+      formMessage.innerHTML = '<span class="text-danger">Oops! Something went wrong. Please try again.</span>';
+    });
+  });
+</script>
+
+				<!-- <div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
 							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
@@ -447,11 +505,11 @@
 
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">FB<span>.</span></a></div>
+						<div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">FB<span>.</span></a></div>
 						<p class="mb-4">Designed with purpose and built for performance, our products combine modern style with dependable functionality. Experience quality that supports your lifestyle every day.</p>
 
 						<ul class="list-unstyled custom-social">

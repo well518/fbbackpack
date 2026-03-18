@@ -179,7 +179,7 @@
 							<div class="intro-excerpt">
 								<h1>FB <span clsss="d-block">Future BackPack</span></h1>
 								<h4><p>Protect Your Spine.</p></h4>
-								<h4><p>Protect Your Life.</p></h4>
+								<h4><p>Power Your Life.</p></h4>
 								
 								
 								<p><a href="shop.html" class="btn btn-white-outline">Explore</a></p>
@@ -262,7 +262,7 @@
 				<div class="row justify-content-between">
 					<div class="col-lg-6">
 						<h2 class="section-title">Why Choose Us</h2>
-						<p>This backpack features an innovative patented design. The Taiwan invention patent was granted in May, with additional patent applications filed across 38 countries worldwide.
+						<p>This backpack features an innovative patented design. The Taiwan invention patent was granted in May, with additional patent applications filed across 44 countries worldwide.
 							Built around a modular ergonomic strap and handle system, the technology can be integrated into various backpack styles, delivering superior comfort, pressure reduction, and enhanced spinal support for everyday carry.</p>
 
 						<div class="row my-5">
@@ -364,7 +364,7 @@
 							<div class="pt-3">
 								<h3>FUture Student BackPack</h3>
 								<p>Professional quality, providing solid support for your daily life. </p>
-								<p><a href="blog.html">Read More</a></p>
+								<p><a href="shop.html">Read More</a></p>
 							</div>
 						</div>
 					</div>
@@ -377,7 +377,7 @@
 							<div class="pt-3">
 								<h3>Future Ergonomic Backpack</h3>
 								<p>Experience quality that supports your lifestyle every day. </p>
-								<p><a href="blog.html">Read More</a></p>
+								<p><a href="shop.html">Read More</a></p>
 							</div>
 						</div>
 					</div>
@@ -390,7 +390,7 @@
 							<div class="pt-3">
 								<h3>Future BusinessBackPack</h3>
 								<p>Premium support for a more vibrant life.. </p>
-								<p><a href="blog.html">Read More</a></p>
+								<p><a href="shop.html">Read More</a></p>
 							</div>
 						</div>
 					</div>
@@ -561,7 +561,67 @@
 					<img src="images/fbpic/logofb.png" alt="Image" class="img-fluid">
 				</div>
 
-				<div class="row">
+
+
+								<div class="row">
+  <div class="col-lg-8">
+    <div class="subscription-form">
+      <h3 class="d-flex align-items-center">
+        <span class="me-1">
+          <img src="images/envelope-outline.svg" alt="Image" class="img-fluid">
+        </span>
+        <span>Subscribe to Newsletter</span>
+      </h3>
+
+      <!-- EmailJS Form -->
+      <form id="newsletter-form" class="row g-3">
+        <div class="col-auto">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="col-auto">
+          <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">
+            <span class="fa fa-paper-plane"></span>
+          </button>
+        </div>
+      </form>
+
+      <div id="form-message" class="mt-3"></div>
+    </div>
+  </div>
+</div>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("4RcVYhHzU-HZK0np0"); // 替換成你的 EmailJS User ID
+  })();
+
+  const form = document.getElementById('newsletter-form');
+  const formMessage = document.getElementById('form-message');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.send("service_da5fxof", "template_sjqpv8a", {
+      from_name: form.name.value,
+      from_email: form.email.value
+    })
+    .then(function(response) {
+      formMessage.innerHTML = '<span class="text-success">Thank you! Your subscription has been sent.</span>';
+      form.reset();
+    }, function(error) {
+      formMessage.innerHTML = '<span class="text-danger">Oops! Something went wrong. Please try again.</span>';
+    });
+  });
+</script>
+
+
+
+				<!-- <div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
 							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
@@ -582,7 +642,7 @@
 
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
