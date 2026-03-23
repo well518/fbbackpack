@@ -24,7 +24,6 @@
 		<title>FB Design Websites by FB Back.co </title>
 	</head>
 
-
 	<style>
 			/* ===== Language Dropdown ===== */
 			.lang-dropdown .dropdown-toggle {
@@ -99,6 +98,7 @@
 				}
 			}
 		</style>
+	
 
 	<body>
 
@@ -115,13 +115,13 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item ">
-							<a class="nav-link" href="index.html">Home</a>
+							<a class="nav-link" href="indexc.html">首頁</a>
 						</li>
-						<li class="active"><a class="nav-link" href="shop.html">Product</a></li>
-						<li><a class="nav-link" href="about.html">About us</a></li>
-						<li><a class="nav-link" href="services.html">Services</a></li>
-						<li><a class="nav-link" href="blog.html">News</a></li>
-						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+						<li><a class="nav-link" href="shop c.html">產品</a></li>
+						<li class="active"><a class="nav-link" href="about c.html">關於我們</a></li>
+						<li><a class="nav-link" href="services.html">服務</a></li>
+						<li><a class="nav-link" href="blog.html">消息</a></li>
+						<li><a class="nav-link" href="contact.html">聯絡我們</a></li>
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -129,50 +129,48 @@
 						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li> -->
 					</ul>
 
-<div class="lang-dropdown dropdown ms-3">
+
+										<!-- ===== Language Switcher ===== -->
+					<div class="lang-dropdown dropdown ms-3">
 						<button class="dropdown-toggle btn" type="button" id="langDropdown"
 							data-bs-toggle="dropdown" aria-expanded="false">
 							<i class="fa fa-globe"></i>
-							<span id="current-lang">LANGUAGE</span>
+							<span id="current-lang">語言</span>
 						</button>
 						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
 							<li>
-								<a class="dropdown-item active" href="shop c.html" onclick="switchLang('zh-TW','繁中',this);">
+								<a class="dropdown-item active" href="indexc.html" onclick="switchLang('zh-TW','繁中',this);">
 									<span class="lang-flag">🇹🇼</span> 中文
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="shop.html" onclick="switchLang('en','EN',this);">
+								<a class="dropdown-item" href="index.html" onclick="switchLang('en','EN',this);">
 									<span class="lang-flag">🇺🇸</span> English
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="shop j.html" onclick="switchLang('ja','日本語',this);">
+								<a class="dropdown-item" href="indexj.html" onclick="switchLang('ja','日本語',this);">
 									<span class="lang-flag">🇯🇵</span> 日本語
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="shop k.html" onclick="switchLang('ko','한국어',this);">
+								<a class="dropdown-item" href="indexk.html" onclick="switchLang('ko','한국어',this);">
 									<span class="lang-flag">🇰🇷</span> 한국어
 								</a>
 							</li>
 							<li>
-								<a class="dropdown-item" href="shop s.html" onclick="switchLang('es','Español',this);">
+								<a class="dropdown-item" href="#" onclick="switchLang('es','Español',this);">
 									<span class="lang-flag">🇪🇸</span> Español
 								</a>
 							</li>
 						</ul>
 					</div>
-
-
-
+					<!-- ===== End Language Switcher ===== -->
 				</div>
 			</div>
 				
 		</nav>
 		<!-- End Header/Navigation -->
-
-		
 
 		<!-- Start Hero Section -->
 			<div class="hero">
@@ -180,12 +178,16 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>FB <span clsas="d-block">Future BackPack</span></h1>
-								<p class="mb-4">Protect your spine.</p>
+								<h1>FB <span clsas="d-block">未來包</span></h1>
+								<p class="mb-4">保護你的脊椎.</p>
+								<!-- <a href="" class="btn btn-secondary me-2">Shop Now</a> -->
+									<p></p><a href="shop.html" class="btn btn-white-outline">探索</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
-							
+							<div class="hero-img-wrap">
+								<img src="images/fbpic/barpicmain.png" class="img-fluid">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -194,144 +196,242 @@
 
 		
 
-		<div class="untree_co-section product-section before-footer-section">
-		    <div class="container">
-		      	<div class="row">
+		<!-- Start Why Choose Us Section -->
+		<div class="why-choose-section">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-6">
+						<h2 class="section-title">Why Choose Us</h2>
+						<p>This backpack features an innovative patented design. The Taiwan invention patent was granted in May, with additional patent applications filed across 38 countries worldwide.
+							Built around a modular ergonomic strap and handle system, the technology can be integrated into various backpack styles, delivering superior comfort, pressure reduction, and enhanced spinal support for everyday carry.</p>
 
-		      		<!-- Start Column 1 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/fbp1 (1).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Student Backpack</h3>
-							<strong class="product-price">Protect Your Spine and Your Health.</strong>
+						<div class="row my-5">
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/fbpic/core_innovation.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>&amp; Core Innovation & Technology</h3>
+									<p>Modular Ergonomic Backpack
+										Featuring independently replaceable straps, handle, and pressure-relief modules, the design extends product longevity while supporting sustainable circular economy principles.</p>
+								</div>
+							</div>
 
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
-					</div> 
-					<!-- End Column 1 -->
-						
-					<!-- Start Column 2 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/0316p2.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Ergonomic Backpack</h3>
-							<strong class="product-price">Designed for Your Spine. Built for the Future.</strong>
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/fbpic/patent_structure.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Patented Central Load-Bearing Structure</h3>
+									<p>By positioning the shoulder straps at the center of the backpack, the design ensures balanced weight distribution and improved carrying stability.</p>
+								</div>
+							</div>
 
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
-					</div> 
-					<!-- End Column 2 -->
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/fbpic/multi_model.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Adjustable Strap Width</h3>
+									<p>Easily customize strap spacing to fit different shoulder widths for maximum comfort.</p>
+								</div>
+							</div>
 
-					<!-- Start Column 3 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbproduct3.png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Business Backpack</h3>
-							<strong class="product-price">Better Balance. Healthier Spine.</strong>
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/fbpic/carbon_sustainability.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Versatile Compatibility</h3>
+									<p>Seamlessly integrates with travel, school, and commuter backpacks.</p>
+										<p>Sustainable & Eco-Friendly Design
+										Replace parts, not the whole backpack, extending lifespan and reducing environmental impact.</p>
+								</div>
+							</div>
 
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
+						</div>
 					</div>
-					<!-- End Column 3 -->
 
-					<!-- Start Column 4 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/h3 (8).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Student Backpack</h3>
-							<strong class="product-price">Light on Your Shoulders, Strong on Support.</strong>
-
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
+					<div class="col-lg-5">
+						<div class="img-wrap">
+							<img src="images/101.jpg" alt="Image" class="img-fluid">
+						</div>
 					</div>
-					<!-- End Column 4 -->
 
+				</div>
+			</div>
+		</div>
+		<!-- End Why Choose Us Section -->
+
+		<!-- Start Team Section -->
+		<div class="untree_co-section">
+			<div class="container">
+
+				<div class="row mb-5">
+					<div class="col-lg-5 mx-auto text-center">
+						<h2 class="section-title">Our Team & Global Patent</h2>
+					</div>
+				</div>
+
+				<div class="row">
 
 					<!-- Start Column 1 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/ph1 (2).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Student Back</h3>
-							<strong class="product-price">Adjustable Shoulder Straps</strong>
-							<strong class="product-price">(Center)</strong>
-
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
+					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+						<img src="images/fbpic/wells.jpg" class="img-fluid mb-5">
+						<h3 clas><a href="#"><span class=""> Wells</span> Chen</a></h3>
+            <span class="d-block position mb-4">CEO, FB BackPack.</span>
+            <p>Separated they live in.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
 					</div> 
 					<!-- End Column 1 -->
-						
+
 					<!-- Start Column 2 -->
+					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+						<img src="images/fbpic/tif.jpg" class="img-fluid mb-5">
 
+						<h3 clas><a href="#"><span class="">Jeremy</span> Walker</a></h3>
+            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
+            <p>Separated they live in.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
 
-										<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/ph2 (2).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Student Back</h3>
-							<strong class="product-price">Adjustable Shoulder Straps</strong>
-							<strong class="product-price">(Right...Lift)</strong>
-
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
 					</div> 
-					<!-- <div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/ph2 (2).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Student Back</h3>
-							<strong class="product-price">Adjustable Shoulder Straps</strong>
-							<strong class="product-price"></strong>
-						
-
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
-					</div>  -->
 					<!-- End Column 2 -->
 
 					<!-- Start Column 3 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/cushion45 (1).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Back Component</h3>
-							<strong class="product-price">Cushioning Device.</strong>
-
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
-					</div>
+					<div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+						<img src="images/fbpic/patent3.jpg" class="img-fluid mb-5">
+						<h3 clas><a href="#"><span class="">Global </span> Patent</a></h3>
+            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
+            <p>Separated they live in.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
+					</div> 
 					<!-- End Column 3 -->
 
 					<!-- Start Column 4 -->
-					<div class="col-12 col-md-4 col-lg-3 mb-5">
-						<a class="product-item" href="#">
-							<img src="images/fbpic/handle45 (1).png" class="img-fluid product-thumbnail">
-							<h3 class="product-title">Future Back Component</h3>
-							<strong class="product-price">Changeable Handle.</strong>
+					<!-- <div class="col-12 col-md-6 col-lg-3 mb-5 mb-md-0">
+						<img src="images/person_4.jpg" class="img-fluid mb-5">
 
-							<span class="icon-cross">
-								<img src="images/info.png" class="img-fluid">
-							</span>
-						</a>
-					</div>
+						<h3 clas><a href="#"><span class="">Kathryn</span> Ryan</a></h3>
+            <span class="d-block position mb-4">CEO, Founder, Atty.</span>
+            <p>Separated they live in.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="mb-0"><a href="#" class="more dark">Learn More <span class="icon-arrow_forward"></span></a></p>
+
+          
+					</div>  -->
 					<!-- End Column 4 -->
 
-		      	</div>
-		    </div>
-		</div>
+					
 
+				</div>
+			</div>
+		</div>
+		<!-- End Team Section -->
+
+		
+
+		<!-- Start Testimonial Slider -->
+		<div class="testimonial-section before-footer-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 mx-auto text-center">
+						<h2 class="section-title">Testimonials</h2>
+					</div>
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-12">
+						<div class="testimonial-slider-wrap text-center">
+
+							<div id="testimonial-nav">
+								<span class="prev" data-controls="prev"><span class="fa fa-chevron-left"></span></span>
+								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
+							</div>
+
+							<div class="testimonial-slider">
+								
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Designed with purpose and built for performance, our products combine modern style with dependable functionality. Experience quality that supports your lifestyle every day.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person_1.jpg" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Wells Chen</h3>
+													<span class="position d-block mb-3">CEO, FB BackPack Ltd.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Designed with purpose and built for performance, our products combine modern style with dependable functionality. Experience quality that supports your lifestyle every day.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person_1.jpg" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Wells Chen</h3>
+													<span class="position d-block mb-3">CEO, FB BackPack Ltd.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+								<div class="item">
+									<div class="row justify-content-center">
+										<div class="col-lg-8 mx-auto">
+
+											<div class="testimonial-block text-center">
+												<blockquote class="mb-5">
+													<p>&ldquo;Designed with purpose and built for performance, our products combine modern style with dependable functionality. Experience quality that supports your lifestyle every day.&rdquo;</p>
+												</blockquote>
+
+												<div class="author-info">
+													<div class="author-pic">
+														<img src="images/person_1.jpg" alt="Maria Jones" class="img-fluid">
+													</div>
+													<h3 class="font-weight-bold">Wells Chen</h3>
+													<span class="position d-block mb-3">CEO, FB BackPack Ltd.</span>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div> 
+								<!-- END item -->
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Testimonial Slider -->
+
+		
 
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
@@ -340,6 +440,7 @@
 				<div class="sofa-img">
 					<img src="images/fbpic/sofa.PNG" alt="Image" class="img-fluid">
 				</div>
+
 
 
 								<div class="row">
@@ -397,7 +498,6 @@
     });
   });
 </script>
-
 
 
 
