@@ -1,0 +1,532 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap4" />
+
+	<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link href="css/tiny-slider.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<title>FB Design Websites by FB Back.co </title>
+
+	<style>
+		/* ===== Language Dropdown ===== */
+		.lang-dropdown .dropdown-toggle {
+			color: rgba(255, 255, 255, .75);
+			background: transparent;
+			border: 1px solid rgba(255, 255, 255, .35);
+			border-radius: 5px;
+			padding: 5px 13px;
+			font-size: 0.85rem;
+			cursor: pointer;
+			transition: all 0.2s ease;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			white-space: nowrap;
+		}
+
+		.lang-dropdown .dropdown-toggle:hover,
+		.lang-dropdown .dropdown-toggle:focus {
+			color: #fff;
+			border-color: rgba(255, 255, 255, .8);
+			background: rgba(255, 255, 255, .1);
+			box-shadow: none;
+		}
+
+		.lang-dropdown .dropdown-toggle::after {
+			margin-left: 2px;
+		}
+
+		.lang-dropdown .dropdown-menu {
+			min-width: 150px;
+			font-size: 0.875rem;
+			border-radius: 8px;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, .15);
+			border: 1px solid rgba(0, 0, 0, .08);
+			padding: 6px 0;
+			margin-top: 8px !important;
+		}
+
+		.lang-dropdown .dropdown-item {
+			padding: 8px 18px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			transition: background 0.15s;
+		}
+
+		.lang-dropdown .dropdown-item:hover {
+			background-color: #f0f0f0;
+		}
+
+		.lang-dropdown .dropdown-item.active {
+			background-color: #2e4482;
+			color: #fff;
+		}
+
+		.lang-flag {
+			font-size: 1.05rem;
+			line-height: 1;
+		}
+
+		.lang-dropdown {
+			display: flex;
+			align-items: center;
+		}
+
+		@media (max-width: 767.98px) {
+			.lang-dropdown {
+				margin-top: 8px;
+				margin-left: 0 !important;
+			}
+		}
+
+		/* ===== Send Button States ===== */
+		#sendBtn {
+			min-width: 160px;
+			transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+		}
+
+		#sendBtn:disabled {
+			opacity: 0.75;
+			cursor: not-allowed;
+		}
+
+		#sendBtn.btn-ok {
+			background-color: #28a745 !important;
+			border-color: #28a745 !important;
+			color: #fff !important;
+		}
+
+		.btn-spinner {
+			display: none;
+			width: 1rem;
+			height: 1rem;
+			border: 2px solid currentColor;
+			border-right-color: transparent;
+			border-radius: 50%;
+			animation: spin 0.65s linear infinite;
+			flex-shrink: 0;
+		}
+
+		.btn-spinner.active {
+			display: inline-block;
+		}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Start Header/Navigation -->
+	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+		<div class="container">
+			<a class="navbar-brand" href="index.html"><img src="images/fbpic/logofbs-w.png" class="img-fluid"></a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+					<li class="nav-item">
+						<a class="nav-link" href="indexc.html">首頁</a>
+					</li>
+					<li><a class="nav-link" href="shop c.html">產品</a></li>
+					<li><a class="nav-link" href="about c.html">關於我們</a></li>
+					<li><a class="nav-link" href="services c.html">服務</a></li>
+					<li><a class="nav-link" href="blog c.html">消息</a></li>
+					<li class="active"><a class="nav-link" href="contact c.html">聯絡我們</a></li>
+				</ul>
+
+				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+				</ul>
+
+				<!-- ===== Language Switcher ===== -->
+				<div class="lang-dropdown dropdown ms-3">
+					<button class="dropdown-toggle btn" type="button" id="langDropdown" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<i class="fa fa-globe"></i>
+						<span id="current-lang">語言</span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+						<li>
+							<a class="dropdown-item active" href="contact c.html" onclick="switchLang('zh-TW','繁中',this);">
+								<span class="lang-flag">🇹🇼</span> 中文
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="contact.html" onclick="switchLang('en','EN',this);">
+								<span class="lang-flag">🇺🇸</span> English
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="contact j.html" onclick="switchLang('ja','日本語',this);">
+								<span class="lang-flag">🇯🇵</span> 日本語
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="contact k.html" onclick="switchLang('ko','한국어',this);">
+								<span class="lang-flag">🇰🇷</span> 한국어
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="contact s.html" onclick="switchLang('es','Español',this);">
+								<span class="lang-flag">🇪🇸</span> Español
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- ===== End Language Switcher ===== -->
+			</div>
+		</div>
+
+	</nav>
+	<!-- End Header/Navigation -->
+
+	<!-- Start Hero Section -->
+	<div class="hero">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-5">
+					<div class="intro-excerpt">
+						<h1>FB <span clsss="d-block">未來包</span></h1>
+								<h4><p><b>保護你的脊椎.</b></p></h4>
+								<h4><p><b>提昇你的生活.</b></p></h4>
+						<p></p><a href="shop c.html" class="btn btn-white-outline">探索</a></p>
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="hero-img-wrap">
+						<img src="images/fbpic/barpicmain.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Hero Section -->
+
+	<!-- Start Contact Form -->
+	<div class="untree_co-section">
+		<div class="container">
+
+			<div class="block">
+				<div class="row justify-content-center">
+
+					<div class="col-md-8 col-lg-8 pb-4">
+
+						<div class="row mb-5">
+							<div class="col-lg-4">
+								<div class="service no-shadow align-items-center link horizontal d-flex active"
+									data-aos="fade-left" data-aos-delay="0">
+									<div class="service-icon color-1 mb-4">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+											<path
+												d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+										</svg>
+									</div>
+									<div class="service-contents">
+										<p>5F-1, No. 26, Sec. 3, Ren'ai Rd., Da'an Dist., Taipei City 106460, Taiwan
+											(R.O.C.).</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="service no-shadow align-items-center link horizontal d-flex active"
+									data-aos="fade-left" data-aos-delay="0">
+									<div class="service-icon color-1 mb-4">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+											<path
+												d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+										</svg>
+									</div>
+									<div class="service-contents">
+										<p>fb.futurebackpack@gmail.com</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="service no-shadow align-items-center link horizontal d-flex active"
+									data-aos="fade-left" data-aos-delay="0">
+									<div class="service-icon color-1 mb-4">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+											<path fill-rule="evenodd"
+												d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+										</svg>
+									</div>
+									<div class="service-contents">
+										<p>+886 970 953 816</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<form id="contactForm" novalidate>
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="fname">First name</label>
+										<input type="text" class="form-control" id="fname" name="fname" required>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group">
+										<label class="text-black" for="lname">Last name</label>
+										<input type="text" class="form-control" id="lname" name="lname" required>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="text-black" for="email">Email address</label>
+								<input type="email" class="form-control" id="email" name="email" required>
+							</div>
+
+							<div class="form-group mb-5">
+								<label class="text-black" for="message">Message</label>
+								<textarea name="message" class="form-control" id="message" cols="30" rows="5"
+									required></textarea>
+							</div>
+
+							<button type="submit" id="sendBtn" class="btn btn-primary-hover-outline">
+								<span class="btn-spinner" id="btnSpinner"></span>
+								<span id="btnText">發送訊息</span>
+							</button>
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- End Contact Form -->
+
+	<!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="sofa-img">
+				<img src="images/fbpic/sofa.PNG" alt="Image" class="img-fluid">
+			</div>
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">FB<span>.</span></a></div>
+					<p class="mb-4">定義未來，從細節開始。我們深信，卓越的產品源於對極致的追求
+										與不斷的創新。每一項技術突破，都是為了提供您前所未有的流暢
+										體驗。立即加入我們的行列，開啟專屬您的數位新紀元，見證科技
+										與美學的完美結合。</p>
+
+					<ul class="list-unstyled custom-social">
+						<li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
+						<li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">關於我們</a></li>
+								<li><a href="#">服務</a></li>
+								<li><a href="#">消息</a></li>
+								<li><a href="#">聯絡我們</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Support</a></li>
+								<li><a href="#">Knowledge base</a></li>
+								<li><a href="#">Live chat</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li><a href="#">Jobs</a></li>
+								<li><a href="#">Our team</a></li>
+								<li><a href="#">Leadership</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="border-top copyright">
+				<div class="row pt-4">
+					<div class="col-lg-6">
+						<p class="mb-2 text-center text-lg-start">Copyright &copy;
+							<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
+							Designed with love by <a href="https://untree.co">FB Back.co</a>
+						</p>
+					</div>
+
+					<div class="col-lg-6 text-center text-lg-end">
+						<ul class="list-unstyled d-inline-flex ms-auto">
+							<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
+
+	<!-- EmailJS SDK v4 -->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+	<script>
+		/* ============================================================
+		   ★ EmailJS 設定區 ★
+		   請至 https://www.emailjs.com/ 取得以下三個值並填入：
+
+		   1. YOUR_PUBLIC_KEY  → My Account > API Keys > Public Key
+		   2. YOUR_SERVICE_ID  → Email Services > 選擇服務 > Service ID
+		   3. YOUR_TEMPLATE_ID → Email Templates > 選擇範本 > Template ID
+
+		   ── Template 建議設定的變數（EmailJS 後台範本中使用） ──
+		   {{from_name}}   寄件者全名（First + Last name）
+		   {{from_email}}  寄件者 Email
+		   {{message}}     留言內容
+		   {{to_email}}    收件人信箱（自動帶入 fb.futurebackpack@gmail.com）
+
+		   ── 範本內容範例 ──
+		   Subject: [FB Future BackPack] New message from {{from_name}}
+
+		   You have received a new contact form submission:
+
+		   Name    : {{from_name}}
+		   Email   : {{from_email}}
+		   Message :
+		   {{message}}
+
+		   ---
+		   Sent via FB Future BackPack Contact Form
+		============================================================ */
+		const EMAILJS_PUBLIC_KEY = '4RcVYhHzU-HZK0np0';   // ← 替換
+		const EMAILJS_SERVICE_ID = 'service_da5fxof';   // ← 替換
+		const EMAILJS_TEMPLATE_ID = 'template_sjqpv8a';  // ← 替換
+		const RECIPIENT_EMAIL = 'fb.futurebackpack@gmail.com';
+
+		// 初始化 EmailJS
+		emailjs.init(EMAILJS_PUBLIC_KEY);
+
+		/* ── 按鈕狀態控制 ── */
+		function setBtn(state) {
+			const btn = document.getElementById('sendBtn');
+			const spinner = document.getElementById('btnSpinner');
+			const text = document.getElementById('btnText');
+
+			if (state === 'loading') {
+				btn.disabled = true;
+				spinner.classList.add('active');
+				text.textContent = 'Sending…';
+				btn.classList.remove('btn-ok');
+
+			} else if (state === 'success') {
+				btn.disabled = false;
+				spinner.classList.remove('active');
+				text.innerHTML = '<i class="fa fa-check" style="margin-right:6px;"></i>OK';
+				btn.classList.add('btn-ok');
+				// 3 秒後自動還原
+				setTimeout(() => {
+					text.textContent = 'Send Message';
+					btn.classList.remove('btn-ok');
+				}, 3000);
+
+			} else {
+				// error / reset
+				btn.disabled = false;
+				spinner.classList.remove('active');
+				text.textContent = 'Send Message';
+				btn.classList.remove('btn-ok');
+			}
+		}
+
+		/* ── 表單送出 ── */
+		document.getElementById('contactForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+
+			const fname = document.getElementById('fname').value.trim();
+			const lname = document.getElementById('lname').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const message = document.getElementById('message').value.trim();
+
+			if (!fname || !lname || !email || !message) {
+				alert('Please fill in all fields.');
+				return;
+			}
+
+			setBtn('loading');
+
+			// 傳給 EmailJS Template 的參數（名稱需與 Template 中的 {{變數}} 一致）
+			const templateParams = {
+				from_name: document.getElementById('fname').value.trim() + ' ' +
+					document.getElementById('lname').value.trim(),
+				from_email: document.getElementById('email').value.trim(),
+				message: document.getElementById('message').value.trim()
+			};
+
+			emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+				.then(function () {
+					setBtn('success');
+					document.getElementById('contactForm').reset();  // 清空表單
+				})
+				.catch(function (error) {
+					setBtn('reset');
+					console.error('EmailJS error:', error);
+					alert('Failed to send. Please email us directly at ' + RECIPIENT_EMAIL);
+				});
+		});
+	</script>
+
+</body>
+
+</html>
