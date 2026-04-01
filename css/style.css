@@ -837,7 +837,9 @@ html, body {
 }
 
 .blog-section .post-entry:hover .post-thumbnail img,
-.blog-section .post-entry:focus .post-thumbnail img {
+/* .blog-section .post-entry:focus .post-thumbnail img {
+  opacity: .7; */
+  .post-entry:hover .post-thumbnail:not(.img-hover-box) img {
   opacity: .7;
 }
 
@@ -1134,4 +1136,26 @@ textarea {
   .footer-section .sofa-img img {
     max-width: 80%;
   }
+}
+
+
+.img-hover-box {
+  display: block;
+  position: relative;
+}
+
+/* 隱藏第二張圖，預設不顯示 */
+.img-hover-box .img-hover {
+  display: none;
+}
+
+/* hover 時：隱藏第一張，顯示第二張 */
+.img-hover-box:hover .img-main {
+  display: none;
+}
+
+.img-hover-box:hover .img-hover {
+  display: block;
+  width: 100%;
+  transform: scale(1.2);
 }
