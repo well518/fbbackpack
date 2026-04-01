@@ -187,6 +187,12 @@ a.more {
   position: relative;
 }
 
+
+
+.hero {
+  overflow: hidden;
+}
+
 .hero .hero-img-wrap img {
   position: relative;
   top: 0px;
@@ -228,7 +234,7 @@ a.more {
   background-image: url("../images/dots-light.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  right: -100px;
+  right: 0px;
   top: -0px;
 }
 
@@ -236,6 +242,47 @@ a.more {
   .hero .hero-img-wrap:after {
     top: -40px;
   }
+}
+
+
+@media (max-width: 767px) {
+  .hero .hero-img-wrap:after {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .we-help-section .imgs-grid {
+    display: block;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .we-help-section .imgs-grid {
+    display: block;
+  }
+
+  .we-help-section .imgs-grid .grid {
+    width: 100%;
+    padding: 0;
+  }
+
+  .we-help-section .imgs-grid .grid.grid-1,
+  .we-help-section .imgs-grid .grid.grid-2,
+  .we-help-section .imgs-grid .grid.grid-3 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 
