@@ -1139,6 +1139,8 @@ textarea {
 }
 
 
+
+
 .img-hover-box {
   display: block;
   position: relative;
@@ -1158,4 +1160,11 @@ textarea {
   display: block;
   width: 100%;
   transform: scale(1.2);
+}
+
+
+.img-hover-box img {
+  opacity: 1 !important;
+  filter: none !important;
+  transition: none;
 }
