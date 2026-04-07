@@ -151,7 +151,7 @@ a.more {
 
 @media (min-width: 992px) {
   .hero {
-    padding: calc(8rem - 30px) 0 8rem 0;
+    padding: calc(4rem - 30px) 0 4rem 0;
   }
 }
 
@@ -793,11 +793,11 @@ html, body {
 }
 
 .before-footer-section {
-  padding: 4rem 0 12rem 0 !important;
+  padding: 7rem 0 12rem 0 !important;
 }
 
 .blog-section {
-  padding: 4rem 0 12rem 0;
+  padding: 7rem 0 12rem 0;
 }
 
 .blog-section .post-entry a {
@@ -933,7 +933,7 @@ html, body {
 
 .footer-section .sofa-img {
   position: absolute;
-  top: -250px;
+  top: -200px;
   z-index: 1;
   right: 0;
 }
