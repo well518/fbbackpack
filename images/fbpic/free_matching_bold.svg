@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+
+<style>
+    .icon { fill: none; stroke: #111; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+
+<rect x="25" y="50" width="70" height="40" class="icon"/>
+<path d="M25 50 h70 M60 50 v40" class="icon"/>
+<path d="M40 50 c0-15 20-15 20 0 c0-15 20-15 20 0" class="icon"/>
+</svg>
